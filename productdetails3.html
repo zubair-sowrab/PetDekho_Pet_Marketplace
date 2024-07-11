@@ -1,0 +1,41 @@
+<html>
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %} Specialist Details {% endblock title %}
+
+
+
+
+{% block main-content %}
+<div class="container">
+    <div class="row flex justify-content-between">
+
+      <div class="img2 col-lg-5 mt-5">
+        <img src=" {{ product3.product_image.url }} " class="image col-xs-6 col-sm-12 col-lg-12 mt-3 text-center w-100 h-75" alt="">
+      </div>
+      <div class="productdetail col lg-5">
+        <h1 style="font-family:Georgia; font-size:50px">{{product3.name }}</h1>
+        <h5> {{ product3.degree }} </h5>
+        <h6> Contact Number: {{ product3.number }} </h6>
+        <h6>Email: {{ product3.email }} </h6>
+
+        <br><br><h4> About</h4>
+        <p class="fs-5" style="font-family:Rajdhani;">
+        {{product3.intro }}
+        </p>
+        
+        <FORM ACTION="#" class="d-inline">
+          <input type="hidden" name="prod_id" value={{product3.id}}>  
+        <button type="submit" class="btn btn-primary shadow px-5 py-2">
+       Chat</button></form>
+       <a href="#" class="btn btn-primary shadow px-5 py-2">
+        Consult</a>            
+
+        </div>
+    </div> 
+   
+
+    </div>
+</div>
+{% endblock main-content %}
+</html>
